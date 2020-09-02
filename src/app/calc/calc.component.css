@@ -1,0 +1,20 @@
+.calc-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  border: 1px solid black;
+  border-style: dashed;
+  border-radius: 5px;
+  width: 450px;
+}
+
+.calc-control-wrapper {
+  border: 1px solid salmon;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 180px;
+}

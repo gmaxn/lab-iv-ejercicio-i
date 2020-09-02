@@ -1,0 +1,22 @@
+<div class="calc-wrapper">
+    <div class="calc-control-wrapper">
+        <label for="">Edad 1: </label>
+        <input type="number"
+            [(ngModel)]="age1" name="age1" class="calc-input" id="input-age1">
+    </div>
+    <div class="calc-control-wrapper">
+        <label for="">Edad 2: </label>
+        <input type="number" 
+            [(ngModel)]="age2" name="age2" class="calc-input" id="input-age2">
+    </div>
+    <div class="calc-control-wrapper">
+        <label for="result-holder-sum">Suma: </label>
+        <input type="number" 
+        [value]="sum" name="result-holder-sum" class="result-holder" id="input-sum" disabled>
+    </div>
+    <div class="calc-control-wrapper">
+        <label for="result-holder-average">Promedio: </label>
+        <input type="text" 
+        [value]="avg" name="result-holder-average" class="result-holder" id="input-avg" disabled>
+    </div>
+</div>
