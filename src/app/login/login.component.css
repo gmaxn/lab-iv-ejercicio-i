@@ -1,0 +1,41 @@
+.login-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  border: 1px solid black;
+  border-style: dashed;
+  border-radius: 5px;
+  width: 450px;
+  margin-bottom: 5px;
+}
+
+.login-control-wrapper {
+  border: 1px solid salmon;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 180px;
+}
+
+.login-button-wrapper {
+    border: 1px solid salmon;
+    border-style: dashed;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 408px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+  }
+
+  .login-button-wrapper>input {
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
