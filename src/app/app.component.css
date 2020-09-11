@@ -1,0 +1,30 @@
+aside {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: flex-start; */
+}
+
+aside div {
+  border: 1px solid whitesmoke;
+  border-style: dashed;
+  display: inline;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+  transition: 0.3s;
+}
+aside div:hover {
+  background-color: whitesmoke;
+}
+aside a {
+  text-decoration: none;
+  /* font-size: 25px; */
+  color: #818181;
+  text-align: center;
+  font-family: 'Bowlby One SC', cursive;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+}

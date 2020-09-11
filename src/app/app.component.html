@@ -8,15 +8,25 @@
   }
 </style>
 
-<!-- Toolbar -->
-<div class="toolbar layout" role="banner" id="starter-nav">
-  nav..
-</div>
-
-<div class="content layout" role="main" id="starter-main">
-  <!-- <app-calc></app-calc>
-  <app-login></app-login>
-  <app-welcome></app-welcome>
-  <app-error></app-error> -->
-  <router-outlet></router-outlet>
+<div class="grid-wrapper">
+  <header>
+    <app-navbar></app-navbar>
+  </header>
+  <aside>
+    <div><a routerLink="/calc" caption="sarasa">Ejercicio 01</a></div>
+    <div><a routerLink="/login">Ejercicio 02</a></div>
+    <div><a href="#">Ejercicio 03</a></div>
+    <div><a href="#">Ejercicio 04</a></div>
+    <div><a href="#">Ejercicio 05</a></div>
+    <div><a href="#">Ejercicio 06</a></div>
+    <div><a href="#">Ejercicio 07</a></div>
+    <div><a href="#">Ejercicio 08</a></div>
+    <div><a href="#">Ejercicio 09</a></div>
+    <div><a href="#">Ejercicio 10</a></div>
+    <div><a href="#">Ejercicio 11</a></div>
+  </aside>
+  <article>
+    <router-outlet></router-outlet>
+  </article>
+  <footer>Footer</footer>
 </div>

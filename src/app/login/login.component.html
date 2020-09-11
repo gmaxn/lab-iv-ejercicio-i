@@ -10,8 +10,8 @@
             [(ngModel)]="password" name="password" class="login-input" id="input-pass">
     </div>
     <div class="login-button-wrapper">
-        <input (click)="login()" type="button" value="login">
-        <input (click)="clear()" type="button" value="clear">
-        <input (click)="logout()" type="button" value="logout">
+        <button type="button" class="btn btn-success" (click)="login()" value="login">Login</button>
+        <button type="button" class="btn btn-primary" (click)="clear()" value="clear">Clear</button>
+        <button type="button" class="btn btn-danger" (click)="logout()" value="logout">Logout</button>
     </div>
 </div>

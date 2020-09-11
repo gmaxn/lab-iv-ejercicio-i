@@ -1,11 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
 * {
   margin: 0;
   padding: 0;
+}
+html, body {
+  height: 100%;
 }
 body {
   border: 1px solid black;
   border-style: dashed;
   border-radius: 5px;
-  padding: 5px;
 }
+header, article, footer {
+  border: 1px solid black;
+  border-style: dashed;
+  border-radius: 5px;
+  margin: 2px;
+}
+
+aside {
+  border: 1px solid black;
+  border-style: dashed;
+  border-radius: 5px;
+  margin: 2px;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-rows: "min-content auto min-content";
+  grid-template-columns: 1fr 5fr;
+}
+header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+aside {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+article {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: #FC7978;
+}
+.flex-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* overflow: hidden; */
+}
+.flex-wrapper>span {
+  margin: 10px;
+}
+.flex-wrapper>span>img {
+  width: 100%;
+  height: auto;
+  max-width: 150px;
+}
+/***************************/

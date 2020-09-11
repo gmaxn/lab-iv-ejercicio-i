@@ -10,6 +10,9 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginComponent } from './login/login.component';
 import { ErrorComponent } from './error/error.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     WelcomeComponent,
     LoginComponent,
     ErrorComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SideNavComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

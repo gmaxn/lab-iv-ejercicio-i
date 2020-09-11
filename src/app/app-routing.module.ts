@@ -6,9 +6,9 @@ import { CalcComponent } from './calc/calc.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-  {path: '', component: CalcComponent},
+  {path: '', component: WelcomeComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: CalcComponent },
+  {path: 'calc', component: CalcComponent },
   {path: 'welcome', component: WelcomeComponent},
   {path: '**', component: ErrorComponent}
 ];

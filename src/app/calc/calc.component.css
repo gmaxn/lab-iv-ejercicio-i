@@ -7,10 +7,13 @@
   border-radius: 5px;
   width: 450px;
   margin-bottom: 5px;
+  margin:auto;
+  transform: translate(0%,50%);
+  vertical-align: center;
 }
 
 .calc-control-wrapper {
-  border: 1px solid salmon;
+  border: 1px solid black;
   border-style: dashed;
   border-radius: 5px;
   padding: 5px;
