@@ -1,0 +1,45 @@
+<div id="component-wrapper">
+
+    <div id="person-grid-wrapper" class="show-margins">
+
+        <div class="layout" id="search-bar">
+            <input type="text" [(ngModel)]='filterTerm' name="" id="search" placeholder='Filter by. . .'>
+
+            <button (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
+            </button>
+
+        </div>
+
+        <div class="layout" id="table-wrapper">
+
+            <table *ngIf='countries && countries.length'>
+
+                <thead>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Population</th>
+                    <th>Region</th>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor='let country of filteredCountries'>
+                        <td><img *ngIf='showImage' [src]='country.imageUrl' [title]='country.name'
+                                [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+                        </td>
+                        <td>
+                            <a>
+                                {{ country.name }}
+                            </a>
+                        </td>
+                        <td>{{ country.population }}</td>
+                        <td>{{ country.region }}</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</div>

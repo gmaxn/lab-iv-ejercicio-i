@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CountriesListComponent } from './countries-list/countries-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ErrorComponent,
     PageNotFoundComponent,
     SideNavComponent,
-    NavbarComponent
+    NavbarComponent,
+    CountriesListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
