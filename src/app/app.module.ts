@@ -15,6 +15,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CountriesGirdComponent } from './countries-list/grid/countries-gird/countries-gird.component';
+import { MultiselectorDropdownComponent } from './shared/multiselector-dropdown/multiselector-dropdown.component';
+import { BetweenRangeComponent } from './shared/between-range/between-range/between-range.component';
+import { CountriesDetailsComponent } from './countries-details/countries-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { HttpClientModule } from '@angular/common/http';
     PageNotFoundComponent,
     SideNavComponent,
     NavbarComponent,
-    CountriesListComponent
+    CountriesListComponent,
+    CountriesGirdComponent,
+    MultiselectorDropdownComponent,
+    BetweenRangeComponent,
+    CountriesDetailsComponent
   ],
   imports: [
     BrowserModule,

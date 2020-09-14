@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { ICountry, ICurrencies } from '../model/country'
 import { CountriesService } from '../services/countries/countries.service'
 @Component({
@@ -7,11 +7,20 @@ import { CountriesService } from '../services/countries/countries.service'
   styleUrls: ['./countries-list.component.css']
 })
 export class CountriesListComponent implements OnInit {
+  
+
+
+  maxPopulation: number;
+  minPopulation: number;
+  regions: Array<string>;
 
   imageWidth: number = 100;
   imageMargin: number = 5;
   showImage: boolean = false;
   errorMessage: string;
+  showGrid: boolean = false;
+  showDetail: boolean = false;
+  country: ICountry;
 
   _filterTerm: string;
 
@@ -44,10 +53,30 @@ export class CountriesListComponent implements OnInit {
     this.filterTerm = message;
   }
 
+  onShowGrid(): void {
+    this.showGrid = !this.showGrid;
+    this.showDetail = false;
+  }
+  
+  onReceiveRegions(regions: Array<string>):void {
+    this.regions = regions;
+  }
+  onReceiveRange(minMax: number[]): void {
+    this.minPopulation = minMax[0];
+    this.maxPopulation = minMax[1];
+  }
+
   performFilter(filterBy: string): ICountry[] {
     filterBy = filterBy.toLocaleLowerCase();
     return this.countries.filter((country: ICountry) =>
     country.name.toLocaleLowerCase().indexOf(filterBy) !== -1);
+  }
+
+  onReceiveCountry(country: ICountry): void {
+    this.country = country;
+    this.showGrid = false;
+    this.showDetail = true;
+    console.log(this.showDetail);
   }
   
   toggleImage(): void {

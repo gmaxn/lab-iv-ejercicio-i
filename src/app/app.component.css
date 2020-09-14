@@ -34,7 +34,8 @@ aside {
 .links-container>div>a {
   text-decoration: none;
   color: #818181;
-  font-family: "Permanent Marker", cursive;
+  font-family: consolas, monospace;
+  font-weight: bold;
   width: 320px;
   height: 320px;
   margin: 0 auto;

@@ -17,7 +17,8 @@ export interface ICountry {
     borders:string[],
     nativeName: string[],
     numericCode: number,
-    currencies: ICurrencies
+    currencies: ICurrencies,
+    flag:string
 }
 
 export interface ICurrencies {

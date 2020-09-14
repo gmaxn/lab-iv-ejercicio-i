@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { CalcComponent } from './calc/calc.component';
 import { ErrorComponent } from './error/error.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
+import { CountriesDetailsComponent } from './countries-details/countries-details.component';
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'calc', component: CalcComponent },
   {path: 'calc', component: CalcComponent },
   {path: 'countries', component: CountriesListComponent},
+  {path: 'details', component: CountriesDetailsComponent},
   {path: '**', component: ErrorComponent}
 ];
 

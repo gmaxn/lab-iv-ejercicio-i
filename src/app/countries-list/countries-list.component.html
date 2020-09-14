@@ -1,45 +1,22 @@
 <div id="component-wrapper">
-
-    <div id="person-grid-wrapper" class="show-margins">
-
-        <div class="layout" id="search-bar">
-            <input type="text" [(ngModel)]='filterTerm' name="" id="search" placeholder='Filter by. . .'>
-
-            <button (click)='toggleImage()'>
-                {{showImage ? 'Hide' : 'Show'}} Image
+    <div id="countries-grid-wrapper-controls" class="show-margins">
+        <div class="layout" id="countries-grid-wrapper-controls2">
+            <app-between-range (notifyPopulationRange)='onReceiveRange($event)'></app-between-range>
+            <app-multiselector-dropdown (notifyRegions)='onReceiveRegions($event)'></app-multiselector-dropdown>
+            <button [(ngModel)]='showImage' class="go-button" (click)='onShowGrid()' id="go-button">
+                Go!
             </button>
-
         </div>
 
-        <div class="layout" id="table-wrapper">
-
-            <table *ngIf='countries && countries.length'>
-
-                <thead>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Population</th>
-                    <th>Region</th>
-                </thead>
-
-                <tbody>
-                    <tr *ngFor='let country of filteredCountries'>
-                        <td><img *ngIf='showImage' [src]='country.imageUrl' [title]='country.name'
-                                [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
-                        </td>
-                        <td>
-                            <a>
-                                {{ country.name }}
-                            </a>
-                        </td>
-                        <td>{{ country.population }}</td>
-                        <td>{{ country.region }}</td>
-                    </tr>
-                </tbody>
-
-            </table>
-
-        </div>
-
+        
+        
     </div>
+    <app-countries-gird *ngIf="showGrid" 
+        [countries]="filteredCountries"
+        [maxPopulation]="maxPopulation"
+        [minPopulation]="minPopulation"
+        [regions]="regions" (notifyCountry)='onReceiveCountry($event)'></app-countries-gird>
+
+
+        <app-countries-details *ngIf="showDetail" [country]=country></app-countries-details>
 </div>

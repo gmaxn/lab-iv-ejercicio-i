@@ -1,0 +1,51 @@
+<style>
+.containers {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    font-family: consolas, 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin: 5px;
+    
+}
+.info {
+    width: 60%;
+}
+
+.image {
+    flex-grow: 1;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.title {
+    width: 100%;
+    margin-bottom: 5px;
+}
+</style>
+
+<div class="visible-borders containers">
+    
+    <div class="visible-borders title">
+        {{title}}
+    </div>
+    
+    <div class="visible-borders image">
+        <img [src]='country.flag' [title]='country.name'
+        [style.width.px]='imageWidth' [style.margin.px]='imageMargin'>
+    </div>
+    
+    <div class="visible-borders info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus saepe unde eum voluptates tempore magnam, odit velit fugit fugiat vero, eaque numquam doloribus dolorem voluptas. Cupiditate itaque natus harum voluptas!
+    </div>
+
+    <div class="visible-borders footer">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, odit. Voluptatem, esse atque architecto repellat maiores adipisci, assumenda nemo voluptatum fuga molestiae repellendus quos nihil perspiciatis tenetur maxime explicabo vero!
+    </div>
+</div>
